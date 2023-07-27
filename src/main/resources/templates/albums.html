@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<h1 th:text="'Albums'"></h1>
+	<div th:if="${albums.empty}">
+		No albums found
+	</div>
+	<div th:else th:each="album : ${albums}">
+		<p><span th:text="${album.albumTitle}"></span></p>
+	</div>
+</body>
+</html>
