@@ -14,7 +14,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 import tw.niq.example.model.AlbumResponseModel;
 
-@Controller
+//@Controller
 public class AlbumController {
 	
 	@Autowired
