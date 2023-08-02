@@ -5,28 +5,19 @@ spring:
     oauth2:
       client:
         registration:
-#          oidcwebclient:
-#            client-id: oidc-web-client
-#            client-secret: NtvwPg9j2OENQdhFgO7fNtWNTBMzG1qu
-#            scope:
-#            - openid
-#            - profile
-#            - roles
-#            authorization-grant-type: authorization_code
-#            redirect-uri: http://localhost:8087/login/oauth2/code/oidcwebclient
-          spring-client:
-            client-id: spring-client
-            client-secret: spring-client-secret
+          oidcwebclient:
+            client-id: oidc-web-client
+            client-secret: NtvwPg9j2OENQdhFgO7fNtWNTBMzG1qu
             scope:
             - openid
+            - profile
+            - roles
             authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:8087/login/oauth2/code/spring-client
+            redirect-uri: http://localhost:8087/login/oauth2/code/oidcwebclient
         provider:
-#          oidcwebclient:
-#            authorization-uri: http://localhost:8080/realms/appsdeveloperblog/protocol/openid-connect/auth
-#            token-uri: http://localhost:8080/realms/appsdeveloperblog/protocol/openid-connect/token
-#            jwk-set-uri: http://localhost:8080/realms/appsdeveloperblog/protocol/openid-connect/certs
-#            user-info-uri: http://localhost:8080/realms/appsdeveloperblog/protocol/openid-connect/userinfo
-#            user-name-attribute: preferred_username
-          spring-client:
-            issuer-uri: http://127.0.0.1:8000
+          oidcwebclient:
+            authorization-uri: http://localhost:8080/realms/appsdeveloperblog/protocol/openid-connect/auth
+            token-uri: http://localhost:8080/realms/appsdeveloperblog/protocol/openid-connect/token
+            jwk-set-uri: http://localhost:8080/realms/appsdeveloperblog/protocol/openid-connect/certs
+            user-info-uri: http://localhost:8080/realms/appsdeveloperblog/protocol/openid-connect/userinfo
+            user-name-attribute: preferred_username
